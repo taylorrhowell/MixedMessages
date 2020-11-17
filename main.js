@@ -10,3 +10,14 @@ const generateActivity = () => {
     const activity = activityList[randomIndex];
     return activity;
 };
+
+const headlineGenerator = () => {
+    const name = randomName({ gender: "male" });
+    const activity = generateActivity();
+    const animal = animalName;
+    const naked = Math.floor(Math.random() * 2) ? 'Naked ' : '';
+    const state = Math.floor(Math.random() * 2) ? 'survives' : 'dies';
+    return `${naked}Florida man, ${name}, ${activity} in ${animal} enclosure, ${state}.`
+};
+
+console.log(headlineGenerator());
